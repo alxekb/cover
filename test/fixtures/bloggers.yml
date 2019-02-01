@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  social_network: MyString
+  followers: 
+  account_name: MyString
+  about: MyText
+
+two:
+  social_network: MyString
+  followers: 
+  account_name: MyString
+  about: MyText

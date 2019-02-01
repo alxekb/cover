@@ -1,0 +1,37 @@
+<%= form_with(model: blogger, local: true) do |form| %>
+  <% if blogger.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blogger.errors.count, "error") %> prohibited this blogger from being saved:</h2>
+
+      <ul>
+      <% blogger.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :social_network %>
+    <%= form.text_field :social_network %>
+  </div>
+
+  <div class="field">
+    <%= form.label :followers %>
+    <%= form.text_field :followers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :account_name %>
+    <%= form.text_field :account_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :about %>
+    <%= form.text_area :about %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
