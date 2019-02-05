@@ -8,6 +8,7 @@
 require 'faker'
 include Faker
 
+Offer.destroy_all
 Blogger.destroy_all
 12.times do
   Blogger.create(
@@ -23,15 +24,14 @@ end
 end
 p "Created #{Blogger.count} account(s)."
 
-Offer.destroy_all
 12.times do
   Offer.create(
     name: Faker::FunnyName.name,
     idea: Faker::Lorem.paragraph,
     purpose: Faker::Lorem.paragraph,
-    description: Faker::Lorem.paragraph
-    price: Faker::Number.decimal(4, 2)
-    blogger_id: Faker::Number.between(0-11)
+    description: Faker::Lorem.paragraph,
+    price: Faker::Number.decimal(4, 2),
+    blogger_id: Blogger.last.id
   )
 end
 p "Creted #{Offer.count} offers."
