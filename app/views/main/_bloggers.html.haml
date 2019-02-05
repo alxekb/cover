@@ -1,0 +1,14 @@
+.bloggers
+  .eyebrow
+    %h2 Наши блогеры
+    %p Чтобы одновременно охватить широкую аудиторию нужно иметь несколько блогеров, которые будут публиковать вашу рекламу. Так ваш бренд полуит возможность попасть в рекомендуемое, при правильной полаче!
+  .row
+    - @bloggers.each do |blogger|
+      .col-md-2.card
+        %lead.bold= blogger.account_name
+        %p
+          = blogger.followers
+          followers
+        %p= blogger.about
+  .text-center
+    = link_to "Показать всех блогеров >", bloggers_path, class: 'btn btn-success'

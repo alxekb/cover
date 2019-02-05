@@ -1,0 +1,16 @@
+.offers
+  .eyebrow
+    %h2
+      Актуальные предложения от агентства
+  .row
+    - @offers.each do |offer|
+      .card.col-md-3
+        %lead.bold= offer.name
+        %p= offer.idea
+        %p= offer.purpose
+        %p= offer.description
+        %p.text-right.bold
+          = offer.price
+          руб
+  .text-center
+    = link_to "показать все предложения >", offers_path, class: 'btn btn-success'

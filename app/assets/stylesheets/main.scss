@@ -1,3 +1,63 @@
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.dark {
+  background-color: #334;
+  color: #eee;
+
+}
+.eyebrow{
+  margin-top: 32px;
+  padding-top: 16px;
+  }
+.text{
+  padding-top: 16px;
+  padding-bottom: 16px;
+  max-width: 640px;
+}
+.text-center {
+  text-align: center;
+}
+.text-dark{
+  color: #111;
+}
+.why-we-are-here {
+  padding-left: 64px;
+  padding-right: 16px;
+  color: #656;
+  background-color: #efe;
+}
+.what {
+  padding-left: 64px;
+  padding-right: 16px;
+}
+.frontpage {
+  text-align: center;
+  padding-top: 64px;
+  padding-bottom: 32px
+}
+.header {font-weight: bold;}
+.offers {
+  padding-left: 32px;
+  padding-right: 32px;
+  color: #222;
+  background-color: #ccc;
+}
+.bloggers {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.card {
+  margin: 16px;
+  padding: 16px;
+}
+.bold {font-weight: bolder;}
+.footer {
+  margin-top: 32px;
+  padding-top: 32px;
+}
+.solutions {
+  padding: 32px;
+  background-color: #234;
+  color: #def
+}

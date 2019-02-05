@@ -1,0 +1,18 @@
+#app
+  {{ message }}
+#app-2
+  %span{:title => "message"}
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+#app-3
+  %span{"v-if" => "seen"} Now you see me
+#app-4
+  %ol
+    %li{"v-for" => "todo in todos"}
+      {{ todo.text }}
+#app-5
+  %p {{ message }}
+  %button{:click => "reverseMessage"} Reverse Message
+#app-6
+  %p {{ message }}
+  %input{"v-model" => "message"}

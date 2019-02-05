@@ -1,0 +1,13 @@
+.solutions
+  .text
+    .eyebrow
+      %h2 Мы предлагаем вам готовые решения.
+      %p
+        Мы не спрашиваем вас, что вы хотите. Мы анализируем ситуацию и предлагаем варианты решений. Вы выбираете удобный вариант.
+        = link_to "Показать решения >>>", solutions_path
+  .row
+    - @solutions.each do |solution|
+      .col-md-3.card.text-dark
+        = solution.problem
+        %p.small= solution.solution
+        = link_to "Подробнее >", solution_path(solution), class: 'btn btn-neutral'
