@@ -22,3 +22,16 @@ end
   p "created blogger #{blogger.account_name}"
 end
 p "Created #{Blogger.count} account(s)."
+
+Offer.destroy_all
+12.times do
+  Offer.create(
+    name: Faker::FunnyName.name,
+    idea: Faker::Lorem.paragraph,
+    purpose: Faker::Lorem.paragraph,
+    description: Faker::Lorem.paragraph
+    price: Faker::Number.decimal(4, 2)
+    blogger_id: Faker::Number.between(0-11)
+  )
+end
+p "Creted #{Offer.count} offers."
