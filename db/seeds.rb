@@ -10,6 +10,9 @@ include Faker
 
 Offer.destroy_all
 Blogger.destroy_all
+Review.destroy_all
+Solution.destroy_all
+
 12.times do
   Blogger.create(
     social_network: "instagram",
@@ -35,3 +38,20 @@ p "Created #{Blogger.count} account(s)."
   )
 end
 p "Creted #{Offer.count} offers."
+12.times do
+  Review.create(
+    brand: Faker::Commerce.product_name,
+    author: Faker::FunnyName.name,
+    review: Faker::Matz.quote
+  )
+end
+p "created #{Review.count} reviews."
+12.times do(
+  Solution.create(
+    problem: Faker::ChuckNorris.fact,
+    solution: Faker::BackToTheFuture.quote,
+    offers_id: Offer.last.id
+  )
+)
+end
+p "Creted #{Solution.count} solutions."

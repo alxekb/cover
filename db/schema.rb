@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_05_074700) do
+ActiveRecord::Schema.define(version: 2019_02_05_091636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,23 @@ ActiveRecord::Schema.define(version: 2019_02_05_074700) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["blogger_id"], name: "index_offers_on_blogger_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "brand"
+    t.string "author"
+    t.text "review"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "solutions", force: :cascade do |t|
+    t.text "problem"
+    t.text "solution"
+    t.bigint "offers_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["offers_id"], name: "index_solutions_on_offers_id"
   end
 
   add_foreign_key "offers", "bloggers"

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :solutions
+  resources :reviews
   resources :offers
   resources :bloggers
   root 'main#index'
